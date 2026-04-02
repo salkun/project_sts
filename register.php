@@ -13,7 +13,7 @@ $success = '';
 if (isset($_POST['register'])) {
     $nama_lengkap = mysqli_real_escape_string($koneksi, $_POST['nama_lengkap']);
     $username = mysqli_real_escape_string($koneksi, $_POST['username']);
-    $password = md5($_POST['password']); // Hashing password
+    $password = mysqli_real_escape_string($koneksi, $_POST['password']); // Tidak dienkripsi
     $role = 'user'; // Default role user biasa
 
     // Cek apakah username sudah ada

@@ -22,12 +22,12 @@ if (isset($_GET['act']) && $_GET['act'] == 'hapus') {
 
 // Handler Aksi Tambah
 if (isset($_POST['tambah'])) {
-    $nama = mysqli_real_escape_string($koneksi, $_POST['nama_barang']);
-    $kategori = mysqli_real_escape_string($koneksi, $_POST['kategori']);
-    $harga = (int)$_POST['harga'];
-    $stok = (int)$_POST['stok'];
+    $nama = mysqli_real_escape_string($koneksi, $_POST['nama_barang']); //sesuaikan dengan project
+    $kategori = mysqli_real_escape_string($koneksi, $_POST['kategori']); //sesuaikan dengan project
+    $harga = (int)$_POST['harga']; //sesuaikan dengan project
+    $stok = (int)$_POST['stok']; //sesuaikan dengan project
 
-    $query = "INSERT INTO barang (nama_barang, kategori, harga, stok) VALUES ('$nama', '$kategori', $harga, $stok)";
+    $query = "INSERT INTO barang (nama_barang, kategori, harga, stok) VALUES ('$nama', '$kategori', $harga, $stok)"; //sesuaikan dengan project
     if (mysqli_query($koneksi, $query)) {
         header("Location: dashboard.php?msg=tambah_sukses");
     } else {

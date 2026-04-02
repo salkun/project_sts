@@ -2,7 +2,7 @@
 $host = "localhost";
 $user = "root";
 $pass = "";
-$db = "db_sts";
+$db = "db_sts"; //sesuaikan dengan project database nya
 
 $koneksi = mysqli_connect($host, $user, $pass, $db);
 
